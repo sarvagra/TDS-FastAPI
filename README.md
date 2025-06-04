@@ -1,12 +1,30 @@
-# 📘 FastAPI Student Management API
+# 📘 FastAPI Student & Sentiment Management API
 
-This is a simple RESTful API built using **FastAPI** that allows you to manage a list of students. You can perform CRUD operations such as:
+This is a simple RESTful API built using **FastAPI** that lets you:
 
-- Get student details
-- Add a new student
-- Update existing student
-- Partially update student
-- Delete a student
+- Manage a list of students with full CRUD operations
+- Analyze the sentiment of a given text using OpenAI's GPT model
+
+---
+
+## ✨ Features
+
+### 🎓 Student Management
+
+- Get student details  
+- Add a new student  
+- Update existing student  
+- Partially update student  
+- Delete a student  
+
+### 💬 Sentiment Analysis
+
+- **Endpoint**: `/sentiment?text=your_input_here`  
+- **Function**: Classifies input text as one of:  
+  - `GOOD`  
+  - `BAD`  
+  - `NEUTRAL`  
+- **Powered by**: OpenAI GPT (gpt-4o-mini)
 
 ---
 
@@ -17,10 +35,11 @@ This is a simple RESTful API built using **FastAPI** that allows you to manage a
 - Python 3.8+
 - FastAPI
 - Uvicorn
+- httpx
+- python-dotenv
 
-Install dependencies:
+### Install Dependencies
 
 ```bash
-pip install fastapi uvicorn
+pip install fastapi uvicorn httpx python-dotenv
 ```
----
